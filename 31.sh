@@ -28,7 +28,7 @@ wget -O configs/rg-swarm.yaml https://raw.githubusercontent.com/pulagam344/gsyn_
 sed -i 's|3000|3001|' hivemind_exp/chain_utils.py
 sed -i 's|REPLACE|3001|' run_rl_swarm.sh
 sed -i 's|REPLACE|3001|' configs/rg-swarm.yaml
-!sed -i 's|3000|3001|' rgym_exp/config/rg-swarm.yaml
+sed -i 's|3000|3001|' rgym_exp/config/rg-swarm.yaml
 
 # Part 2
 git clone https://github.com/gensyn-ai/rl-swarm.git /root/my_rl_swarm_62
@@ -42,7 +42,7 @@ wget -O configs/rg-swarm.yaml https://raw.githubusercontent.com/pulagam344/gsyn_
 sed -i 's|3000|3002|' hivemind_exp/chain_utils.py
 sed -i 's|REPLACE|3002|' run_rl_swarm.sh
 sed -i 's|REPLACE|3002|' configs/rg-swarm.yaml
-!sed -i 's|3000|3002|' rgym_exp/config/rg-swarm.yaml
+sed -i 's|3000|3002|' rgym_exp/config/rg-swarm.yaml
 
 git config --global credential.helper store
 export PYTORCH_CUDA_ALLOC_CONF='expandable_segments:True'

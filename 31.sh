@@ -77,20 +77,20 @@ monitor_swarms() {
       run_swarm "/root/my_rl_swarm_62" 1 "swarm_62" &
     fi
 
-    # Wait before next check (e.g., every 2 minutes)
-    sleep 120
+    # Wait before next check (e.g., every 1 minutes)
+    sleep 60
   done
 }
 
 # Start both swarms
 export CUDA_VISIBLE_DEVICES=0
 run_swarm "/root/my_rl_swarm_61" 0 "swarm_61" &
-sleep 600
+sleep 10
 export CUDA_VISIBLE_DEVICES=1
 run_swarm "/root/my_rl_swarm_62" 1 "swarm_62" &
 
-# Start monitoring after 5 minutes
-sleep 300
+# Start monitoring after 30 seconds
+sleep 30
 monitor_swarms &
 
 # Wait for all background processes to complete

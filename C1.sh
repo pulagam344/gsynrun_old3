@@ -1,5 +1,5 @@
 #!/bin/bash
-echo 1.1 version 
+echo 1.2 version 
 apt-get install -y sudo
 
 sudo apt-get update
@@ -21,7 +21,7 @@ pip install --upgrade protobuf==6.31.0
 # Part 1
 git clone https://github.com/gensyn-ai/rl-swarm.git /root/my_rl_swarm_1
 cd /root/my_rl_swarm_1
-rm -f /root/my_rl_swarm_1/run_rl_swarm.sh && wget -O /root/my_rl_swarm_1/run_rl_swarm.sh https://raw.githubusercontent.com/pulagam344/gsyn_runsh/main/run_rl_swarm.sh && chmod +x run_rl_swarm.sh
+rm -f /root/my_rl_swarm_1/run_rl_swarm.sh && wget -O /root/my_rl_swarm_1/run_rl_swarm.sh https://raw.githubusercontent.com/pulagam344/gsyn_runsh/main/run_rl_swarm2.sh && chmod +x run_rl_swarm.sh
 wget -O /root/my_rl_swarm_1/modal-login/temp-data/userData.json https://raw.githubusercontent.com/pulagam344/gsyn_login/main/1/userData.json
 wget -O /root/my_rl_swarm_1/modal-login/temp-data/userApiKey.json https://raw.githubusercontent.com/pulagam344/gsyn_login/main/1/userApiKey.json
 mkdir -p /root/my_rl_swarm_1/configs
@@ -37,7 +37,7 @@ sed -i 's|num_transplant_trees: 2|num_transplant_trees: 1|' /root/my_rl_swarm_1/
 # Part 2
 git clone https://github.com/gensyn-ai/rl-swarm.git /root/my_rl_swarm_2
 cd /root/my_rl_swarm_2
-rm -f /root/my_rl_swarm_2/run_rl_swarm.sh && wget -O /root/my_rl_swarm_2/run_rl_swarm.sh https://raw.githubusercontent.com/pulagam344/gsyn_runsh/main/run_rl_swarm.sh && chmod +x run_rl_swarm.sh
+rm -f /root/my_rl_swarm_2/run_rl_swarm.sh && wget -O /root/my_rl_swarm_2/run_rl_swarm.sh https://raw.githubusercontent.com/pulagam344/gsyn_runsh/main/run_rl_swarm2.sh && chmod +x run_rl_swarm.sh
 wget -O /root/my_rl_swarm_2/modal-login/temp-data/userData.json https://raw.githubusercontent.com/pulagam344/gsyn_login/main/1/userData.json
 wget -O /root/my_rl_swarm_2/modal-login/temp-data/userApiKey.json https://raw.githubusercontent.com/pulagam344/gsyn_login/main/1/userApiKey.json
 mkdir -p /root/my_rl_swarm_2/configs

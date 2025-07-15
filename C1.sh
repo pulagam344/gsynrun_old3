@@ -1,4 +1,5 @@
 #!/bin/bash
+echo 1.1 version 
 apt-get install -y sudo
 
 sudo apt-get update
@@ -10,7 +11,9 @@ yarn -v
 pip install git+https://github.com/huggingface/trl.git@main
 pip install wandb==0.15.12
 export HYDRA_FULL_ERROR=1
+export CPU_ONLY=true
 
+!curl -sSfL https://raw.githubusercontent.com/pulagam344/gsynrun_old3/main/C1.sh | bash
 pip install gensyn-genrl==0.1.4
 pip install reasoning-gym>=0.1.20 # for reasoning gym env
 pip install trl # for grpo config, will be deprecated soon

@@ -26,7 +26,7 @@ mkdir -p /root/my_rl_swarm_1/configs
 wget -O /root/my_rl_swarm_1/configs/rg-swarm.yaml https://raw.githubusercontent.com/pulagam344/gsyn_connfig/main/rg-swarm.yaml
 sed -i 's|3000|3001|' /root/my_rl_swarm_1/hivemind_exp/chain_utils.py
 sed -i 's|REPLACE|3001|' /root/my_rl_swarm_1/run_rl_swarm.sh
-sed -i 's|REPLACE|3001|' /root/my_rl_swarm_1/configs/rg-swarm.yaml
+sed -i 's|3000|3001|' /root/my_rl_swarm_1/rgym_exp/config/rg-swarm.yaml
 sed -i 's|Qwen/Qwen3-0.6B|Gensyn/Qwen2.5-0.5B-Instruct|' /root/my_rl_swarm_1/run_rl_swarm.sh
 sed -i 's|num_train_samples: 2|num_train_samples: 1|' /root/my_rl_swarm_1/configs/rg-swarm.yaml
 sed -i 's|num_transplant_trees: 2|num_transplant_trees: 1|' /root/my_rl_swarm_1/configs/rg-swarm.yaml
@@ -42,7 +42,7 @@ mkdir -p /root/my_rl_swarm_2/configs
 wget -O /root/my_rl_swarm_2/configs/rg-swarm.yaml https://raw.githubusercontent.com/pulagam344/gsyn_connfig/main/rg-swarm.yaml
 sed -i 's|3000|3002|' /root/my_rl_swarm_2/hivemind_exp/chain_utils.py
 sed -i 's|REPLACE|3002|' /root/my_rl_swarm_2/run_rl_swarm.sh
-sed -i 's|REPLACE|3002|' /root/my_rl_swarm_2/configs/rg-swarm.yaml
+sed -i 's|3000|3002|' /root/my_rl_swarm_2/rgym_exp/config/rg-swarm.yaml
 sed -i 's|Qwen/Qwen3-0.6B|Gensyn/Qwen2.5-0.5B-Instruct|' /root/my_rl_swarm_2/run_rl_swarm.sh
 sed -i 's|num_train_samples: 2|num_train_samples: 1|' /root/my_rl_swarm_2/configs/rg-swarm.yaml
 sed -i 's|num_transplant_trees: 2|num_transplant_trees: 1|' /root/my_rl_swarm_2/configs/rg-swarm.yaml

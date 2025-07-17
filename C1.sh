@@ -1,5 +1,5 @@
 #!/bin/bash
-echo 1.2 version 
+echo 1.3 version 
 apt-get install -y sudo
 
 sudo apt-get update
@@ -52,12 +52,30 @@ sed -i 's|num_transplant_trees: 2|num_transplant_trees: 1|' /root/my_rl_swarm_2/
 git config --global credential.helper store
 
 # Function to run a swarm with logging
+# run_swarm() {
+#   local dir=$1
+#   local swarm_name=$2
+#   (
+#     cd "$dir" && ./run_rl_swarm.sh 2>&1 |
+#     while IFS= read -r line; do
+#       echo "[$(date +%H:%M:%S)]-[$swarm_name] $line"
+#     done
+#   )
+# }
 run_swarm() {
   local dir=$1
   local swarm_name=$2
   (
-    cd "$dir" && ./run_rl_swarm.sh 2>&1 |
-    while IFS= read -r line; do
+    cd "$dir"
+
+    # Export TPU variables here
+    export TPU_NAME=""
+    export XRT_TPU_CONFIG=""
+    export TPU_VISIBLE_DEVICES=""
+    export TPU_USE_LOCAL="1"
+    export XLA_USE_HOST_CALL="0"
+
+    ./run_rl_swarm.sh 2>&1 | while IFS= read -r line; do
       echo "[$(date +%H:%M:%S)]-[$swarm_name] $line"
     done
   )

@@ -1,5 +1,5 @@
 #!/bin/bash
-echo 1.5 version 
+echo 1.6 version 
 # apt-get install -y sudo
 
 # sudo apt-get update
@@ -259,7 +259,7 @@ monitor_swarms() {
 
 # Start both swarms
 run_swarm "/home/gsynpeer/my_rl_swarm_1" "swarm_1" &
-sleep 10
+sleep 120
 run_swarm "/home/gsynpeer/my_rl_swarm_2" "swarm_2" &
 sleep 10
 run_swarm "/home/gsynpeer/my_rl_swarm_3" "swarm_3" &

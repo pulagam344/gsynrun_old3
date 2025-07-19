@@ -1,23 +1,23 @@
 #!/bin/bash
-echo 1.4 version 
-apt-get install -y sudo
+echo 1.5 version 
+# apt-get install -y sudo
 
-sudo apt-get update
-curl -fsSL https://deb.nodesource.com/setup_22.x | sudo -E bash -
-sudo apt-get install -y nodejs
-node -v
-sudo npm install -g yarn
-yarn -v
-pip install git+https://github.com/huggingface/trl.git@main
-pip install wandb==0.15.12
+# sudo apt-get update
+# curl -fsSL https://deb.nodesource.com/setup_22.x | sudo -E bash -
+# sudo apt-get install -y nodejs
+# node -v
+# sudo npm install -g yarn
+# yarn -v
+# pip install git+https://github.com/huggingface/trl.git@main
+# pip install wandb==0.15.12
 export HYDRA_FULL_ERROR=1
 export CPU_ONLY=true
-sudo apt install python3-pip
+# sudo apt install python3-pip
 
-pip install gensyn-genrl==0.1.4
-pip install reasoning-gym>=0.1.20 # for reasoning gym env
-pip install trl # for grpo config, will be deprecated soon
-pip install hivemind@git+https://github.com/gensyn-ai/hivemind@639c964a8019de63135a2594663b5bec8e5356dd # We need the latest, 1.1.11 is broken
+# pip install gensyn-genrl==0.1.4
+# pip install reasoning-gym>=0.1.20 # for reasoning gym env
+# pip install trl # for grpo config, will be deprecated soon
+# pip install hivemind@git+https://github.com/gensyn-ai/hivemind@639c964a8019de63135a2594663b5bec8e5356dd # We need the latest, 1.1.11 is broken
 #pip install --upgrade protobuf==6.31.0
 
 # Part 1

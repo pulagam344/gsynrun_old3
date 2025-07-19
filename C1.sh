@@ -1,5 +1,5 @@
 #!/bin/bash
-echo 1.3 version 
+echo 2 version 
 apt-get install -y sudo
 
 sudo apt-get update
@@ -11,7 +11,6 @@ yarn -v
 pip install git+https://github.com/huggingface/trl.git@main
 pip install wandb==0.15.12
 export HYDRA_FULL_ERROR=1
-export CPU_ONLY=true
 
 pip install gensyn-genrl==0.1.4
 pip install reasoning-gym>=0.1.20 # for reasoning gym env
@@ -21,33 +20,29 @@ pip install --upgrade protobuf==6.31.0
 # Part 1
 git clone https://github.com/gensyn-ai/rl-swarm.git /root/my_rl_swarm_1
 cd /root/my_rl_swarm_1
-rm -f /root/my_rl_swarm_1/run_rl_swarm.sh && wget -O /root/my_rl_swarm_1/run_rl_swarm.sh https://raw.githubusercontent.com/pulagam344/gsyn_runsh/main/run_rl_swarm2.sh && chmod +x run_rl_swarm.sh
+rm -f /root/my_rl_swarm_1/run_rl_swarm.sh && wget -O /root/my_rl_swarm_1/run_rl_swarm.sh https://raw.githubusercontent.com/pulagam344/gsyn_runsh/main/run_rl_swarm.sh && chmod +x run_rl_swarm.sh
 wget -O /root/my_rl_swarm_1/modal-login/temp-data/userData.json https://raw.githubusercontent.com/pulagam344/gsyn_login/main/1/userData.json
 wget -O /root/my_rl_swarm_1/modal-login/temp-data/userApiKey.json https://raw.githubusercontent.com/pulagam344/gsyn_login/main/1/userApiKey.json
-mkdir -p /root/my_rl_swarm_1/configs
-wget -O /root/my_rl_swarm_1/configs/rg-swarm.yaml https://raw.githubusercontent.com/pulagam344/gsyn_connfig/main/rg-swarm.yaml
+wget -O /root/my_rl_swarm_1/rgym_exp/config/rg-swarm.yaml https://raw.githubusercontent.com/pulagam344/gsyn_connfig/main/c-rg-swarm.yaml
 sed -i 's|3000|3001|' /root/my_rl_swarm_1/hivemind_exp/chain_utils.py
 sed -i 's|REPLACE|3001|' /root/my_rl_swarm_1/run_rl_swarm.sh
 sed -i 's|3000|3001|' /root/my_rl_swarm_1/rgym_exp/config/rg-swarm.yaml
 sed -i 's|Qwen/Qwen3-0.6B|Gensyn/Qwen2.5-0.5B-Instruct|' /root/my_rl_swarm_1/run_rl_swarm.sh
-sed -i 's|num_train_samples: 2|num_train_samples: 1|' /root/my_rl_swarm_1/configs/rg-swarm.yaml
-sed -i 's|num_transplant_trees: 2|num_transplant_trees: 1|' /root/my_rl_swarm_1/configs/rg-swarm.yaml
+
 
 
 # Part 2
 git clone https://github.com/gensyn-ai/rl-swarm.git /root/my_rl_swarm_2
 cd /root/my_rl_swarm_2
-rm -f /root/my_rl_swarm_2/run_rl_swarm.sh && wget -O /root/my_rl_swarm_2/run_rl_swarm.sh https://raw.githubusercontent.com/pulagam344/gsyn_runsh/main/run_rl_swarm2.sh && chmod +x run_rl_swarm.sh
+rm -f /root/my_rl_swarm_2/run_rl_swarm.sh && wget -O /root/my_rl_swarm_2/run_rl_swarm.sh https://raw.githubusercontent.com/pulagam344/gsyn_runsh/main/run_rl_swarm.sh && chmod +x run_rl_swarm.sh
 wget -O /root/my_rl_swarm_2/modal-login/temp-data/userData.json https://raw.githubusercontent.com/pulagam344/gsyn_login/main/1/userData.json
 wget -O /root/my_rl_swarm_2/modal-login/temp-data/userApiKey.json https://raw.githubusercontent.com/pulagam344/gsyn_login/main/1/userApiKey.json
-mkdir -p /root/my_rl_swarm_2/configs
-wget -O /root/my_rl_swarm_2/configs/rg-swarm.yaml https://raw.githubusercontent.com/pulagam344/gsyn_connfig/main/rg-swarm.yaml
+wget -O /root/my_rl_swarm_1/rgym_exp/config/rg-swarm.yaml https://raw.githubusercontent.com/pulagam344/gsyn_connfig/main/c-rg-swarm.yaml
 sed -i 's|3000|3002|' /root/my_rl_swarm_2/hivemind_exp/chain_utils.py
 sed -i 's|REPLACE|3002|' /root/my_rl_swarm_2/run_rl_swarm.sh
 sed -i 's|3000|3002|' /root/my_rl_swarm_2/rgym_exp/config/rg-swarm.yaml
 sed -i 's|Qwen/Qwen3-0.6B|Gensyn/Qwen2.5-0.5B-Instruct|' /root/my_rl_swarm_2/run_rl_swarm.sh
-sed -i 's|num_train_samples: 2|num_train_samples: 1|' /root/my_rl_swarm_2/configs/rg-swarm.yaml
-sed -i 's|num_transplant_trees: 2|num_transplant_trees: 1|' /root/my_rl_swarm_2/configs/rg-swarm.yaml
+
 
 git config --global credential.helper store
 

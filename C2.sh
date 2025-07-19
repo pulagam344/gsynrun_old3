@@ -12,6 +12,7 @@ pip install git+https://github.com/huggingface/trl.git@main
 pip install wandb==0.15.12
 export HYDRA_FULL_ERROR=1
 export CPU_ONLY=true
+sudo apt install python3-pip
 
 pip install gensyn-genrl==0.1.4
 pip install reasoning-gym>=0.1.20 # for reasoning gym env

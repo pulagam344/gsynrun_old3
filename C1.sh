@@ -1,5 +1,5 @@
 #!/bin/bash
-echo 2 version 
+echo 2.1 version 
 apt-get install -y sudo
 
 sudo apt-get update
@@ -37,7 +37,7 @@ cd /root/my_rl_swarm_2
 rm -f /root/my_rl_swarm_2/run_rl_swarm.sh && wget -O /root/my_rl_swarm_2/run_rl_swarm.sh https://raw.githubusercontent.com/pulagam344/gsyn_runsh/main/run_rl_swarm.sh && chmod +x run_rl_swarm.sh
 wget -O /root/my_rl_swarm_2/modal-login/temp-data/userData.json https://raw.githubusercontent.com/pulagam344/gsyn_login/main/1/userData.json
 wget -O /root/my_rl_swarm_2/modal-login/temp-data/userApiKey.json https://raw.githubusercontent.com/pulagam344/gsyn_login/main/1/userApiKey.json
-wget -O /root/my_rl_swarm_1/rgym_exp/config/rg-swarm.yaml https://raw.githubusercontent.com/pulagam344/gsyn_connfig/main/c-rg-swarm.yaml
+wget -O /root/my_rl_swarm_2/rgym_exp/config/rg-swarm.yaml https://raw.githubusercontent.com/pulagam344/gsyn_connfig/main/c-rg-swarm.yaml
 sed -i 's|3000|3002|' /root/my_rl_swarm_2/hivemind_exp/chain_utils.py
 sed -i 's|REPLACE|3002|' /root/my_rl_swarm_2/run_rl_swarm.sh
 sed -i 's|3000|3002|' /root/my_rl_swarm_2/rgym_exp/config/rg-swarm.yaml

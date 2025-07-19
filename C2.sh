@@ -1,5 +1,5 @@
 #!/bin/bash
-echo 1.6 version 
+echo 1.7 version 
 # apt-get install -y sudo
 
 # sudo apt-get update

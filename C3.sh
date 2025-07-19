@@ -1,5 +1,5 @@
 #!/bin/bash
-echo 2.4.1 version 
+echo 2.4.2 version 
 apt-get install -y sudo
 
 sudo apt-get update
@@ -35,8 +35,8 @@ sed -i 's|Qwen/Qwen3-0.6B|Gensyn/Qwen2.5-0.5B-Instruct|' /home/gsynpeer/my_rl_sw
 git clone https://github.com/gensyn-ai/rl-swarm.git /home/gsynpeer/my_rl_swarm_2
 cd /home/gsynpeer/my_rl_swarm_2
 rm -f /home/gsynpeer/my_rl_swarm_2/run_rl_swarm.sh && wget -O /home/gsynpeer/my_rl_swarm_2/run_rl_swarm.sh https://raw.githubusercontent.com/pulagam344/gsyn_runsh/main/run_rl_swarm.sh && chmod +x run_rl_swarm.sh
-wget -O /home/gsynpeer/my_rl_swarm_2/modal-login/temp-data/userData.json https://raw.githubusercontent.com/pulagam344/gsyn_login/main/37/userData.json
-wget -O /home/gsynpeer/my_rl_swarm_2/modal-login/temp-data/userApiKey.json https://raw.githubusercontent.com/pulagam344/gsyn_login/main/37/userApiKey.json
+wget -O /home/gsynpeer/my_rl_swarm_2/modal-login/temp-data/userData.json https://raw.githubusercontent.com/pulagam344/gsyn_login/main/38/userData.json
+wget -O /home/gsynpeer/my_rl_swarm_2/modal-login/temp-data/userApiKey.json https://raw.githubusercontent.com/pulagam344/gsyn_login/main/38/userApiKey.json
 wget -O /home/gsynpeer/my_rl_swarm_2/rgym_exp/config/rg-swarm.yaml https://raw.githubusercontent.com/pulagam344/gsyn_connfig/main/c-rg-swarm.yaml
 sed -i 's|3000|3002|' /home/gsynpeer/my_rl_swarm_2/hivemind_exp/chain_utils.py
 sed -i 's|REPLACE|3002|' /home/gsynpeer/my_rl_swarm_2/run_rl_swarm.sh

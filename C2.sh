@@ -1,5 +1,5 @@
 #!/bin/bash
-echo 2.22 version 
+echo 2.222 version 
 
 apt-get install -y sudo
 sudo apt-get update
@@ -212,13 +212,13 @@ monitor_swarms() {
     # fi
 
     # Wait before next check (e.g., every 2 minutes)
-    sleep 60
+    sleep 30
   done
 }
 
 # Start both swarms
 run_swarm "/home/gsynpeer/my_rl_swarm_1" "swarm_1" &
-sleep 250
+sleep 10
 run_swarm "/home/gsynpeer/my_rl_swarm_2" "swarm_2" &
 sleep 10
 run_swarm "/home/gsynpeer/my_rl_swarm_3" "swarm_3" &
@@ -237,7 +237,7 @@ run_swarm "/home/gsynpeer/my_rl_swarm_5" "swarm_5" &
 # sleep 10
 # run_swarm "/home/gsynpeer/my_rl_swarm_10" "swarm_10" &
 # Start monitoring after 5 minutes
-sleep 300
+sleep 30
 monitor_swarms &
 
 # Wait for all background processes to complete

@@ -77,15 +77,15 @@ run_swarm() {
 monitor_swarms() {
   while true; do
     # Check swarm_1
-    if [ ! -f "/home/gsynpeer/running_3001.txt" ]; then
+    if [ ! -f "/root/running_3001.txt" ]; then
       echo "[$(date +%H:%M:%S)]-[monitor] Swarm_61 stopped, restarting..."
-      run_swarm "/home/gsynpeer/my_rl_swarm_61" "swarm_61" &
+      run_swarm "/root/my_rl_swarm_61" "swarm_61" &
     fi
 
     # Check swarm_2
-    if [ ! -f "/home/gsynpeer/running_3002.txt" ]; then
+    if [ ! -f "/root/running_3002.txt" ]; then
       echo "[$(date +%H:%M:%S)]-[monitor] Swarm_62 stopped, restarting..."
-      run_swarm "/home/gsynpeer/my_rl_swarm_62" "swarm_62" &
+      run_swarm "/root/my_rl_swarm_62" "swarm_62" &
     fi
 
     # Wait before next check (e.g., every 2 minutes)
@@ -94,9 +94,9 @@ monitor_swarms() {
 }
 
 # Start both swarms
-run_swarm "/home/gsynpeer/my_rl_swarm_61" "swarm_61" &
+run_swarm "/root/my_rl_swarm_61" "swarm_61" &
 sleep 300
-run_swarm "/home/gsynpeer/my_rl_swarm_62" "swarm_62" &
+run_swarm "/root/my_rl_swarm_62" "swarm_62" &
 
 # Start monitoring after 5 minutes
 sleep 300

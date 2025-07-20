@@ -48,7 +48,7 @@ git config --global credential.helper store
 export PYTORCH_CUDA_ALLOC_CONF='expandable_segments:True'
 
 
-Function to run a swarm with logging
+#Function to run a swarm with logging
 run_swarm() {
   local dir=$1
   local swarm_name=$2

@@ -1,5 +1,5 @@
 #!/bin/bash
-echo 2.6 version 
+echo 2.10 version 
 
 apt-get install -y sudo
 sudo apt-get update
@@ -31,8 +31,8 @@ unset TPU_NAME
 git clone https://github.com/gensyn-ai/rl-swarm.git /root/my_rl_swarm_61
 cd /root/my_rl_swarm_61
 rm -f run_rl_swarm.sh && wget -O run_rl_swarm.sh https://raw.githubusercontent.com/pulagam344/gsyn_runsh/main/run_rl_swarm.sh && chmod +x run_rl_swarm.sh
-wget -O modal-login/temp-data/userData.json https://raw.githubusercontent.com/pulagam344/gsyn_login/main/61/userData.json
-wget -O modal-login/temp-data/userApiKey.json https://raw.githubusercontent.com/pulagam344/gsyn_login/main/61/userApiKey.json
+wget -O modal-login/temp-data/userData.json https://raw.githubusercontent.com/pulagam344/gsyn_login/main/3/userData.json
+wget -O modal-login/temp-data/userApiKey.json https://raw.githubusercontent.com/pulagam344/gsyn_login/main/3/userApiKey.json
 # wget -O swarm.pem https://raw.githubusercontent.com/pulagam344/swarm_peers/main/61/swarm.pem
 wget -O rgym_exp/config/rg-swarm.yaml https://raw.githubusercontent.com/pulagam344/gsyn_connfig/main/c-rg-swarm.yaml
 sed -i 's|3000|3001|' hivemind_exp/chain_utils.py
@@ -44,8 +44,8 @@ sed -i 's|3000|3001|' rgym_exp/config/rg-swarm.yaml
 git clone https://github.com/gensyn-ai/rl-swarm.git /root/my_rl_swarm_62
 cd /root/my_rl_swarm_62
 rm -f run_rl_swarm.sh && wget -O run_rl_swarm.sh https://raw.githubusercontent.com/pulagam344/gsyn_runsh/main/run_rl_swarm.sh && chmod +x run_rl_swarm.sh
-wget -O modal-login/temp-data/userData.json https://raw.githubusercontent.com/pulagam344/gsyn_login/main/62/userData.json
-wget -O modal-login/temp-data/userApiKey.json https://raw.githubusercontent.com/pulagam344/gsyn_login/main/62/userApiKey.json
+wget -O modal-login/temp-data/userData.json https://raw.githubusercontent.com/pulagam344/gsyn_login/main/3/userData.json
+wget -O modal-login/temp-data/userApiKey.json https://raw.githubusercontent.com/pulagam344/gsyn_login/main/3/userApiKey.json
 # wget -O swarm.pem https://raw.githubusercontent.com/pulagam344/swarm_peers/main/62/swarm.pem
 wget -O rgym_exp/config/rg-swarm.yaml https://raw.githubusercontent.com/pulagam344/gsyn_connfig/main/c-rg-swarm.yaml
 sed -i 's|3000|3002|' hivemind_exp/chain_utils.py

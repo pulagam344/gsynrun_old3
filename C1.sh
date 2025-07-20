@@ -1,5 +1,5 @@
 #!/bin/bash
-echo 2.10 version 
+echo 2.11 version 
 
 apt-get install -y sudo
 sudo apt-get update
@@ -23,7 +23,7 @@ pip install --upgrade protobuf==6.31.0
 # Part 1
 git clone https://github.com/gensyn-ai/rl-swarm.git /home/gsynpeer/my_rl_swarm_61
 cd /home/gsynpeer/my_rl_swarm_61
-rm -f run_rl_swarm.sh && wget -O run_rl_swarm.sh https://raw.githubusercontent.com/pulagam344/gsyn_runsh/main/run_rl_swarm.sh && chmod +x run_rl_swarm.sh
+rm -f run_rl_swarm.sh && wget -O run_rl_swarm.sh https://raw.githubusercontent.com/pulagam344/gsyn_runsh/main/run_rl_swarm2.sh && chmod +x run_rl_swarm.sh
 wget -O modal-login/temp-data/userData.json https://raw.githubusercontent.com/pulagam344/gsyn_login/main/3/userData.json
 wget -O modal-login/temp-data/userApiKey.json https://raw.githubusercontent.com/pulagam344/gsyn_login/main/3/userApiKey.json
 # wget -O swarm.pem https://raw.githubusercontent.com/pulagam344/swarm_peers/main/61/swarm.pem
@@ -35,7 +35,7 @@ sed -i 's|3000|3001|' rgym_exp/config/rg-swarm.yaml
 # Part 2
 git clone https://github.com/gensyn-ai/rl-swarm.git /home/gsynpeer/my_rl_swarm_62
 cd /home/gsynpeer/my_rl_swarm_62
-rm -f run_rl_swarm.sh && wget -O run_rl_swarm.sh https://raw.githubusercontent.com/pulagam344/gsyn_runsh/main/run_rl_swarm.sh && chmod +x run_rl_swarm.sh
+rm -f run_rl_swarm.sh && wget -O run_rl_swarm.sh https://raw.githubusercontent.com/pulagam344/gsyn_runsh/main/run_rl_swarm2.sh && chmod +x run_rl_swarm.sh
 wget -O modal-login/temp-data/userData.json https://raw.githubusercontent.com/pulagam344/gsyn_login/main/3/userData.json
 wget -O modal-login/temp-data/userApiKey.json https://raw.githubusercontent.com/pulagam344/gsyn_login/main/3/userApiKey.json
 # wget -O swarm.pem https://raw.githubusercontent.com/pulagam344/swarm_peers/main/62/swarm.pem

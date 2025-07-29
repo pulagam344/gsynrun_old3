@@ -181,35 +181,35 @@ monitor_swarms() {
       run_swarm "/home/gsynpeer/my_rl_swarm_5" "swarm_5" &
     fi
 
-    # Check swarm_6
-    if [ ! -f "/home/gsynpeer/running_3006.txt" ]; then
-      echo "[$(date +%H:%M:%S)]-[monitor] Swarm_6 stopped, restarting..."
-      run_swarm "/home/gsynpeer/my_rl_swarm_6" "swarm_6" &
-    fi
+    # # Check swarm_6
+    # if [ ! -f "/home/gsynpeer/running_3006.txt" ]; then
+    #   echo "[$(date +%H:%M:%S)]-[monitor] Swarm_6 stopped, restarting..."
+    #   run_swarm "/home/gsynpeer/my_rl_swarm_6" "swarm_6" &
+    # fi
 
-    # Check swarm_7
-    if [ ! -f "/home/gsynpeer/running_3007.txt" ]; then
-      echo "[$(date +%H:%M:%S)]-[monitor] Swarm_7 stopped, restarting..."
-      run_swarm "/home/gsynpeer/my_rl_swarm_7" "swarm_7" &
-    fi
+    # # Check swarm_7
+    # if [ ! -f "/home/gsynpeer/running_3007.txt" ]; then
+    #   echo "[$(date +%H:%M:%S)]-[monitor] Swarm_7 stopped, restarting..."
+    #   run_swarm "/home/gsynpeer/my_rl_swarm_7" "swarm_7" &
+    # fi
 
-    # Check swarm_8
-    if [ ! -f "/home/gsynpeer/running_3008.txt" ]; then
-      echo "[$(date +%H:%M:%S)]-[monitor] Swarm_8 stopped, restarting..."
-      run_swarm "/home/gsynpeer/my_rl_swarm_8" "swarm_8" &
-    fi
+    # # Check swarm_8
+    # if [ ! -f "/home/gsynpeer/running_3008.txt" ]; then
+    #   echo "[$(date +%H:%M:%S)]-[monitor] Swarm_8 stopped, restarting..."
+    #   run_swarm "/home/gsynpeer/my_rl_swarm_8" "swarm_8" &
+    # fi
 
-    # Check swarm_9
-    if [ ! -f "/home/gsynpeer/running_3009.txt" ]; then
-      echo "[$(date +%H:%M:%S)]-[monitor] Swarm_9 stopped, restarting..."
-      run_swarm "/home/gsynpeer/my_rl_swarm_9" "swarm_9" &
-    fi
+    # # Check swarm_9
+    # if [ ! -f "/home/gsynpeer/running_3009.txt" ]; then
+    #   echo "[$(date +%H:%M:%S)]-[monitor] Swarm_9 stopped, restarting..."
+    #   run_swarm "/home/gsynpeer/my_rl_swarm_9" "swarm_9" &
+    # fi
 
-    # Check swarm_10
-    if [ ! -f "/home/gsynpeer/running_3010.txt" ]; then
-      echo "[$(date +%H:%M:%S)]-[monitor] Swarm_10 stopped, restarting..."
-      run_swarm "/home/gsynpeer/my_rl_swarm_10" "swarm_10" &
-    fi
+    # # Check swarm_10
+    # if [ ! -f "/home/gsynpeer/running_3010.txt" ]; then
+    #   echo "[$(date +%H:%M:%S)]-[monitor] Swarm_10 stopped, restarting..."
+    #   run_swarm "/home/gsynpeer/my_rl_swarm_10" "swarm_10" &
+    # fi
 
     # Wait before next check (e.g., every 2 minutes)
     sleep 1
@@ -227,16 +227,16 @@ run_swarm "/home/gsynpeer/my_rl_swarm_4" "swarm_4" &
 sleep 3
 run_swarm "/home/gsynpeer/my_rl_swarm_5" "swarm_5" &
 sleep 3
-run_swarm "/home/gsynpeer/my_rl_swarm_6" "swarm_6" &
-sleep 3
-run_swarm "/home/gsynpeer/my_rl_swarm_7" "swarm_7" &
-sleep 3
-run_swarm "/home/gsynpeer/my_rl_swarm_8" "swarm_8" &
-sleep 3
-run_swarm "/home/gsynpeer/my_rl_swarm_9" "swarm_9" &
-sleep 3
-run_swarm "/home/gsynpeer/my_rl_swarm_10" "swarm_10" &
-sleep 3
+# run_swarm "/home/gsynpeer/my_rl_swarm_6" "swarm_6" &
+# sleep 3
+# run_swarm "/home/gsynpeer/my_rl_swarm_7" "swarm_7" &
+# sleep 3
+# run_swarm "/home/gsynpeer/my_rl_swarm_8" "swarm_8" &
+# sleep 3
+# run_swarm "/home/gsynpeer/my_rl_swarm_9" "swarm_9" &
+# sleep 3
+# run_swarm "/home/gsynpeer/my_rl_swarm_10" "swarm_10" &
+# sleep 3
 
 # Start monitoring after 5 minutes
 monitor_swarms &

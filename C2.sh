@@ -1,5 +1,5 @@
 #!/bin/bash
-echo 2.6 version 
+echo 2.7 version 
 
 # apt-get install -y sudo
 # sudo apt-get update

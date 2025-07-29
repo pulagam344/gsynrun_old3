@@ -1,5 +1,5 @@
 #!/bin/bash
-echo 2.4 version 
+echo 2.5 version 
 
 # apt-get install -y sudo
 # sudo apt-get update
@@ -19,119 +19,119 @@ echo 2.4 version
 # pip install hivemind@git+https://github.com/gensyn-ai/hivemind@639c964a8019de63135a2594663b5bec8e5356dd # We need the latest, 1.1.11 is broken
 # pip install --upgrade protobuf==6.31.0
 
-# Part 1
-git clone https://github.com/gensyn-ai/rl-swarm.git /home/gsynpeer/my_rl_swarm_1
-cd /home/gsynpeer/my_rl_swarm_1
-rm -f run_rl_swarm.sh && wget -O run_rl_swarm.sh https://raw.githubusercontent.com/pulagam344/gsyn_runsh/main/run_rl_swarm2.sh && chmod +x run_rl_swarm.sh
-wget -O modal-login/temp-data/userData.json https://raw.githubusercontent.com/pulagam344/gsyn_login/main/3/userData.json
-wget -O modal-login/temp-data/userApiKey.json https://raw.githubusercontent.com/pulagam344/gsyn_login/main/3/userApiKey.json
-wget -O rgym_exp/config/rg-swarm.yaml https://raw.githubusercontent.com/pulagam344/gsyn_connfig/main/c-rg-swarm.yaml
-sed -i 's|3000|3001|' hivemind_exp/chain_utils.py
-sed -i 's|REPLACE|3001|' run_rl_swarm.sh
-sed -i 's|3000|3001|' rgym_exp/config/rg-swarm.yaml
+# # Part 1
+# git clone https://github.com/gensyn-ai/rl-swarm.git /home/gsynpeer/my_rl_swarm_1
+# cd /home/gsynpeer/my_rl_swarm_1
+# rm -f run_rl_swarm.sh && wget -O run_rl_swarm.sh https://raw.githubusercontent.com/pulagam344/gsyn_runsh/main/run_rl_swarm2.sh && chmod +x run_rl_swarm.sh
+# wget -O modal-login/temp-data/userData.json https://raw.githubusercontent.com/pulagam344/gsyn_login/main/3/userData.json
+# wget -O modal-login/temp-data/userApiKey.json https://raw.githubusercontent.com/pulagam344/gsyn_login/main/3/userApiKey.json
+# wget -O rgym_exp/config/rg-swarm.yaml https://raw.githubusercontent.com/pulagam344/gsyn_connfig/main/c-rg-swarm.yaml
+# sed -i 's|3000|3001|' hivemind_exp/chain_utils.py
+# sed -i 's|REPLACE|3001|' run_rl_swarm.sh
+# sed -i 's|3000|3001|' rgym_exp/config/rg-swarm.yaml
 
-# Part 2
-git clone https://github.com/gensyn-ai/rl-swarm.git /home/gsynpeer/my_rl_swarm_2
-cd /home/gsynpeer/my_rl_swarm_2
-rm -f run_rl_swarm.sh && wget -O run_rl_swarm.sh https://raw.githubusercontent.com/pulagam344/gsyn_runsh/main/run_rl_swarm2.sh && chmod +x run_rl_swarm.sh
-wget -O modal-login/temp-data/userData.json https://raw.githubusercontent.com/pulagam344/gsyn_login/main/3/userData.json
-wget -O modal-login/temp-data/userApiKey.json https://raw.githubusercontent.com/pulagam344/gsyn_login/main/3/userApiKey.json
-wget -O rgym_exp/config/rg-swarm.yaml https://raw.githubusercontent.com/pulagam344/gsyn_connfig/main/c-rg-swarm.yaml
-sed -i 's|3000|3002|' hivemind_exp/chain_utils.py
-sed -i 's|REPLACE|3002|' run_rl_swarm.sh
-sed -i 's|3000|3002|' rgym_exp/config/rg-swarm.yaml
+# # Part 2
+# git clone https://github.com/gensyn-ai/rl-swarm.git /home/gsynpeer/my_rl_swarm_2
+# cd /home/gsynpeer/my_rl_swarm_2
+# rm -f run_rl_swarm.sh && wget -O run_rl_swarm.sh https://raw.githubusercontent.com/pulagam344/gsyn_runsh/main/run_rl_swarm2.sh && chmod +x run_rl_swarm.sh
+# wget -O modal-login/temp-data/userData.json https://raw.githubusercontent.com/pulagam344/gsyn_login/main/3/userData.json
+# wget -O modal-login/temp-data/userApiKey.json https://raw.githubusercontent.com/pulagam344/gsyn_login/main/3/userApiKey.json
+# wget -O rgym_exp/config/rg-swarm.yaml https://raw.githubusercontent.com/pulagam344/gsyn_connfig/main/c-rg-swarm.yaml
+# sed -i 's|3000|3002|' hivemind_exp/chain_utils.py
+# sed -i 's|REPLACE|3002|' run_rl_swarm.sh
+# sed -i 's|3000|3002|' rgym_exp/config/rg-swarm.yaml
 
-# Part 3
-git clone https://github.com/gensyn-ai/rl-swarm.git /home/gsynpeer/my_rl_swarm_3
-cd /home/gsynpeer/my_rl_swarm_3
-rm -f run_rl_swarm.sh && wget -O run_rl_swarm.sh https://raw.githubusercontent.com/pulagam344/gsyn_runsh/main/run_rl_swarm2.sh && chmod +x run_rl_swarm.sh
-wget -O modal-login/temp-data/userData.json https://raw.githubusercontent.com/pulagam344/gsyn_login/main/3/userData.json
-wget -O modal-login/temp-data/userApiKey.json https://raw.githubusercontent.com/pulagam344/gsyn_login/main/3/userApiKey.json
-wget -O rgym_exp/config/rg-swarm.yaml https://raw.githubusercontent.com/pulagam344/gsyn_connfig/main/c-rg-swarm.yaml
-sed -i 's|3000|3003|' hivemind_exp/chain_utils.py
-sed -i 's|REPLACE|3003|' run_rl_swarm.sh
-sed -i 's|3000|3003|' rgym_exp/config/rg-swarm.yaml
-
-
-# Part 4
-git clone https://github.com/gensyn-ai/rl-swarm.git /home/gsynpeer/my_rl_swarm_4
-cd /home/gsynpeer/my_rl_swarm_4
-rm -f run_rl_swarm.sh && wget -O run_rl_swarm.sh https://raw.githubusercontent.com/pulagam344/gsyn_runsh/main/run_rl_swarm2.sh && chmod +x run_rl_swarm.sh
-wget -O modal-login/temp-data/userData.json https://raw.githubusercontent.com/pulagam344/gsyn_login/main/3/userData.json
-wget -O modal-login/temp-data/userApiKey.json https://raw.githubusercontent.com/pulagam344/gsyn_login/main/3/userApiKey.json
-wget -O rgym_exp/config/rg-swarm.yaml https://raw.githubusercontent.com/pulagam344/gsyn_connfig/main/c-rg-swarm.yaml
-sed -i 's|3000|3004|' hivemind_exp/chain_utils.py
-sed -i 's|REPLACE|3004|' run_rl_swarm.sh
-sed -i 's|3000|3004|' rgym_exp/config/rg-swarm.yaml
+# # Part 3
+# git clone https://github.com/gensyn-ai/rl-swarm.git /home/gsynpeer/my_rl_swarm_3
+# cd /home/gsynpeer/my_rl_swarm_3
+# rm -f run_rl_swarm.sh && wget -O run_rl_swarm.sh https://raw.githubusercontent.com/pulagam344/gsyn_runsh/main/run_rl_swarm2.sh && chmod +x run_rl_swarm.sh
+# wget -O modal-login/temp-data/userData.json https://raw.githubusercontent.com/pulagam344/gsyn_login/main/3/userData.json
+# wget -O modal-login/temp-data/userApiKey.json https://raw.githubusercontent.com/pulagam344/gsyn_login/main/3/userApiKey.json
+# wget -O rgym_exp/config/rg-swarm.yaml https://raw.githubusercontent.com/pulagam344/gsyn_connfig/main/c-rg-swarm.yaml
+# sed -i 's|3000|3003|' hivemind_exp/chain_utils.py
+# sed -i 's|REPLACE|3003|' run_rl_swarm.sh
+# sed -i 's|3000|3003|' rgym_exp/config/rg-swarm.yaml
 
 
-# Part 5
-git clone https://github.com/gensyn-ai/rl-swarm.git /home/gsynpeer/my_rl_swarm_5
-cd /home/gsynpeer/my_rl_swarm_5
-rm -f run_rl_swarm.sh && wget -O run_rl_swarm.sh https://raw.githubusercontent.com/pulagam344/gsyn_runsh/main/run_rl_swarm2.sh && chmod +x run_rl_swarm.sh
-wget -O modal-login/temp-data/userData.json https://raw.githubusercontent.com/pulagam344/gsyn_login/main/3/userData.json
-wget -O modal-login/temp-data/userApiKey.json https://raw.githubusercontent.com/pulagam344/gsyn_login/main/3/userApiKey.json
-wget -O rgym_exp/config/rg-swarm.yaml https://raw.githubusercontent.com/pulagam344/gsyn_connfig/main/c-rg-swarm.yaml
-sed -i 's|3000|3005|' hivemind_exp/chain_utils.py
-sed -i 's|REPLACE|3005|' run_rl_swarm.sh
-sed -i 's|3000|3005|' rgym_exp/config/rg-swarm.yaml
+# # Part 4
+# git clone https://github.com/gensyn-ai/rl-swarm.git /home/gsynpeer/my_rl_swarm_4
+# cd /home/gsynpeer/my_rl_swarm_4
+# rm -f run_rl_swarm.sh && wget -O run_rl_swarm.sh https://raw.githubusercontent.com/pulagam344/gsyn_runsh/main/run_rl_swarm2.sh && chmod +x run_rl_swarm.sh
+# wget -O modal-login/temp-data/userData.json https://raw.githubusercontent.com/pulagam344/gsyn_login/main/3/userData.json
+# wget -O modal-login/temp-data/userApiKey.json https://raw.githubusercontent.com/pulagam344/gsyn_login/main/3/userApiKey.json
+# wget -O rgym_exp/config/rg-swarm.yaml https://raw.githubusercontent.com/pulagam344/gsyn_connfig/main/c-rg-swarm.yaml
+# sed -i 's|3000|3004|' hivemind_exp/chain_utils.py
+# sed -i 's|REPLACE|3004|' run_rl_swarm.sh
+# sed -i 's|3000|3004|' rgym_exp/config/rg-swarm.yaml
 
 
-# Part 6
-git clone https://github.com/gensyn-ai/rl-swarm.git /home/gsynpeer/my_rl_swarm_6
-cd /home/gsynpeer/my_rl_swarm_6
-rm -f run_rl_swarm.sh && wget -O run_rl_swarm.sh https://raw.githubusercontent.com/pulagam344/gsyn_runsh/main/run_rl_swarm2.sh && chmod +x run_rl_swarm.sh
-wget -O modal-login/temp-data/userData.json https://raw.githubusercontent.com/pulagam344/gsyn_login/main/3/userData.json
-wget -O modal-login/temp-data/userApiKey.json https://raw.githubusercontent.com/pulagam344/gsyn_login/main/3/userApiKey.json
-wget -O rgym_exp/config/rg-swarm.yaml https://raw.githubusercontent.com/pulagam344/gsyn_connfig/main/c-rg-swarm.yaml
-sed -i 's|3000|3006|' hivemind_exp/chain_utils.py
-sed -i 's|REPLACE|3006|' run_rl_swarm.sh
-sed -i 's|3000|3006|' rgym_exp/config/rg-swarm.yaml
-
-# Part 7
-git clone https://github.com/gensyn-ai/rl-swarm.git /home/gsynpeer/my_rl_swarm_7
-cd /home/gsynpeer/my_rl_swarm_7
-rm -f run_rl_swarm.sh && wget -O run_rl_swarm.sh https://raw.githubusercontent.com/pulagam344/gsyn_runsh/main/run_rl_swarm2.sh && chmod +x run_rl_swarm.sh
-wget -O modal-login/temp-data/userData.json https://raw.githubusercontent.com/pulagam344/gsyn_login/main/3/userData.json
-wget -O modal-login/temp-data/userApiKey.json https://raw.githubusercontent.com/pulagam344/gsyn_login/main/3/userApiKey.json
-wget -O rgym_exp/config/rg-swarm.yaml https://raw.githubusercontent.com/pulagam344/gsyn_connfig/main/c-rg-swarm.yaml
-sed -i 's|3000|3007|' hivemind_exp/chain_utils.py
-sed -i 's|REPLACE|3007|' run_rl_swarm.sh
-sed -i 's|3000|3007|' rgym_exp/config/rg-swarm.yaml
+# # Part 5
+# git clone https://github.com/gensyn-ai/rl-swarm.git /home/gsynpeer/my_rl_swarm_5
+# cd /home/gsynpeer/my_rl_swarm_5
+# rm -f run_rl_swarm.sh && wget -O run_rl_swarm.sh https://raw.githubusercontent.com/pulagam344/gsyn_runsh/main/run_rl_swarm2.sh && chmod +x run_rl_swarm.sh
+# wget -O modal-login/temp-data/userData.json https://raw.githubusercontent.com/pulagam344/gsyn_login/main/3/userData.json
+# wget -O modal-login/temp-data/userApiKey.json https://raw.githubusercontent.com/pulagam344/gsyn_login/main/3/userApiKey.json
+# wget -O rgym_exp/config/rg-swarm.yaml https://raw.githubusercontent.com/pulagam344/gsyn_connfig/main/c-rg-swarm.yaml
+# sed -i 's|3000|3005|' hivemind_exp/chain_utils.py
+# sed -i 's|REPLACE|3005|' run_rl_swarm.sh
+# sed -i 's|3000|3005|' rgym_exp/config/rg-swarm.yaml
 
 
-# Part 8
-git clone https://github.com/gensyn-ai/rl-swarm.git /home/gsynpeer/my_rl_swarm_8
-cd /home/gsynpeer/my_rl_swarm_8
-rm -f run_rl_swarm.sh && wget -O run_rl_swarm.sh https://raw.githubusercontent.com/pulagam344/gsyn_runsh/main/run_rl_swarm2.sh && chmod +x run_rl_swarm.sh
-wget -O modal-login/temp-data/userData.json https://raw.githubusercontent.com/pulagam344/gsyn_login/main/3/userData.json
-wget -O modal-login/temp-data/userApiKey.json https://raw.githubusercontent.com/pulagam344/gsyn_login/main/3/userApiKey.json
-wget -O rgym_exp/config/rg-swarm.yaml https://raw.githubusercontent.com/pulagam344/gsyn_connfig/main/c-rg-swarm.yaml
-sed -i 's|3000|3008|' hivemind_exp/chain_utils.py
-sed -i 's|REPLACE|3008|' run_rl_swarm.sh
-sed -i 's|3000|3008|' rgym_exp/config/rg-swarm.yaml
+# # Part 6
+# git clone https://github.com/gensyn-ai/rl-swarm.git /home/gsynpeer/my_rl_swarm_6
+# cd /home/gsynpeer/my_rl_swarm_6
+# rm -f run_rl_swarm.sh && wget -O run_rl_swarm.sh https://raw.githubusercontent.com/pulagam344/gsyn_runsh/main/run_rl_swarm2.sh && chmod +x run_rl_swarm.sh
+# wget -O modal-login/temp-data/userData.json https://raw.githubusercontent.com/pulagam344/gsyn_login/main/3/userData.json
+# wget -O modal-login/temp-data/userApiKey.json https://raw.githubusercontent.com/pulagam344/gsyn_login/main/3/userApiKey.json
+# wget -O rgym_exp/config/rg-swarm.yaml https://raw.githubusercontent.com/pulagam344/gsyn_connfig/main/c-rg-swarm.yaml
+# sed -i 's|3000|3006|' hivemind_exp/chain_utils.py
+# sed -i 's|REPLACE|3006|' run_rl_swarm.sh
+# sed -i 's|3000|3006|' rgym_exp/config/rg-swarm.yaml
 
-# Part 9
-git clone https://github.com/gensyn-ai/rl-swarm.git /home/gsynpeer/my_rl_swarm_9
-cd /home/gsynpeer/my_rl_swarm_9
-rm -f run_rl_swarm.sh && wget -O run_rl_swarm.sh https://raw.githubusercontent.com/pulagam344/gsyn_runsh/main/run_rl_swarm2.sh && chmod +x run_rl_swarm.sh
-wget -O modal-login/temp-data/userData.json https://raw.githubusercontent.com/pulagam344/gsyn_login/main/3/userData.json
-wget -O modal-login/temp-data/userApiKey.json https://raw.githubusercontent.com/pulagam344/gsyn_login/main/3/userApiKey.json
-wget -O rgym_exp/config/rg-swarm.yaml https://raw.githubusercontent.com/pulagam344/gsyn_connfig/main/c-rg-swarm.yaml
-sed -i 's|3000|3009|' hivemind_exp/chain_utils.py
-sed -i 's|REPLACE|3009|' run_rl_swarm.sh
-sed -i 's|3000|3009|' rgym_exp/config/rg-swarm.yaml
+# # Part 7
+# git clone https://github.com/gensyn-ai/rl-swarm.git /home/gsynpeer/my_rl_swarm_7
+# cd /home/gsynpeer/my_rl_swarm_7
+# rm -f run_rl_swarm.sh && wget -O run_rl_swarm.sh https://raw.githubusercontent.com/pulagam344/gsyn_runsh/main/run_rl_swarm2.sh && chmod +x run_rl_swarm.sh
+# wget -O modal-login/temp-data/userData.json https://raw.githubusercontent.com/pulagam344/gsyn_login/main/3/userData.json
+# wget -O modal-login/temp-data/userApiKey.json https://raw.githubusercontent.com/pulagam344/gsyn_login/main/3/userApiKey.json
+# wget -O rgym_exp/config/rg-swarm.yaml https://raw.githubusercontent.com/pulagam344/gsyn_connfig/main/c-rg-swarm.yaml
+# sed -i 's|3000|3007|' hivemind_exp/chain_utils.py
+# sed -i 's|REPLACE|3007|' run_rl_swarm.sh
+# sed -i 's|3000|3007|' rgym_exp/config/rg-swarm.yaml
 
-# Part 10
-git clone https://github.com/gensyn-ai/rl-swarm.git /home/gsynpeer/my_rl_swarm_10
-cd /home/gsynpeer/my_rl_swarm_10
-rm -f run_rl_swarm.sh && wget -O run_rl_swarm.sh https://raw.githubusercontent.com/pulagam344/gsyn_runsh/main/run_rl_swarm2.sh && chmod +x run_rl_swarm.sh
-wget -O modal-login/temp-data/userData.json https://raw.githubusercontent.com/pulagam344/gsyn_login/main/3/userData.json
-wget -O modal-login/temp-data/userApiKey.json https://raw.githubusercontent.com/pulagam344/gsyn_login/main/3/userApiKey.json
-wget -O rgym_exp/config/rg-swarm.yaml https://raw.githubusercontent.com/pulagam344/gsyn_connfig/main/c-rg-swarm.yaml
-sed -i 's|3000|3010|' hivemind_exp/chain_utils.py
-sed -i 's|REPLACE|3010|' run_rl_swarm.sh
-sed -i 's|3000|3010|' rgym_exp/config/rg-swarm.yaml
+
+# # Part 8
+# git clone https://github.com/gensyn-ai/rl-swarm.git /home/gsynpeer/my_rl_swarm_8
+# cd /home/gsynpeer/my_rl_swarm_8
+# rm -f run_rl_swarm.sh && wget -O run_rl_swarm.sh https://raw.githubusercontent.com/pulagam344/gsyn_runsh/main/run_rl_swarm2.sh && chmod +x run_rl_swarm.sh
+# wget -O modal-login/temp-data/userData.json https://raw.githubusercontent.com/pulagam344/gsyn_login/main/3/userData.json
+# wget -O modal-login/temp-data/userApiKey.json https://raw.githubusercontent.com/pulagam344/gsyn_login/main/3/userApiKey.json
+# wget -O rgym_exp/config/rg-swarm.yaml https://raw.githubusercontent.com/pulagam344/gsyn_connfig/main/c-rg-swarm.yaml
+# sed -i 's|3000|3008|' hivemind_exp/chain_utils.py
+# sed -i 's|REPLACE|3008|' run_rl_swarm.sh
+# sed -i 's|3000|3008|' rgym_exp/config/rg-swarm.yaml
+
+# # Part 9
+# git clone https://github.com/gensyn-ai/rl-swarm.git /home/gsynpeer/my_rl_swarm_9
+# cd /home/gsynpeer/my_rl_swarm_9
+# rm -f run_rl_swarm.sh && wget -O run_rl_swarm.sh https://raw.githubusercontent.com/pulagam344/gsyn_runsh/main/run_rl_swarm2.sh && chmod +x run_rl_swarm.sh
+# wget -O modal-login/temp-data/userData.json https://raw.githubusercontent.com/pulagam344/gsyn_login/main/3/userData.json
+# wget -O modal-login/temp-data/userApiKey.json https://raw.githubusercontent.com/pulagam344/gsyn_login/main/3/userApiKey.json
+# wget -O rgym_exp/config/rg-swarm.yaml https://raw.githubusercontent.com/pulagam344/gsyn_connfig/main/c-rg-swarm.yaml
+# sed -i 's|3000|3009|' hivemind_exp/chain_utils.py
+# sed -i 's|REPLACE|3009|' run_rl_swarm.sh
+# sed -i 's|3000|3009|' rgym_exp/config/rg-swarm.yaml
+
+# # Part 10
+# git clone https://github.com/gensyn-ai/rl-swarm.git /home/gsynpeer/my_rl_swarm_10
+# cd /home/gsynpeer/my_rl_swarm_10
+# rm -f run_rl_swarm.sh && wget -O run_rl_swarm.sh https://raw.githubusercontent.com/pulagam344/gsyn_runsh/main/run_rl_swarm2.sh && chmod +x run_rl_swarm.sh
+# wget -O modal-login/temp-data/userData.json https://raw.githubusercontent.com/pulagam344/gsyn_login/main/3/userData.json
+# wget -O modal-login/temp-data/userApiKey.json https://raw.githubusercontent.com/pulagam344/gsyn_login/main/3/userApiKey.json
+# wget -O rgym_exp/config/rg-swarm.yaml https://raw.githubusercontent.com/pulagam344/gsyn_connfig/main/c-rg-swarm.yaml
+# sed -i 's|3000|3010|' hivemind_exp/chain_utils.py
+# sed -i 's|REPLACE|3010|' run_rl_swarm.sh
+# sed -i 's|3000|3010|' rgym_exp/config/rg-swarm.yaml
 
 git config --global credential.helper store
 

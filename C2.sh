@@ -1,5 +1,5 @@
 #!/bin/bash
-echo 2.5 version 
+echo 2.6 version 
 
 # apt-get install -y sudo
 # sudo apt-get update
@@ -218,25 +218,25 @@ monitor_swarms() {
 
 # Start both swarms
 run_swarm "/home/gsynpeer/my_rl_swarm_1" "swarm_1" &
-sleep 3
+sleep 30
 run_swarm "/home/gsynpeer/my_rl_swarm_2" "swarm_2" &
-sleep 3
+sleep 5
 run_swarm "/home/gsynpeer/my_rl_swarm_3" "swarm_3" &
-sleep 3
+sleep 5
 run_swarm "/home/gsynpeer/my_rl_swarm_4" "swarm_4" &
-sleep 3
+sleep 5
 run_swarm "/home/gsynpeer/my_rl_swarm_5" "swarm_5" &
-sleep 3
+sleep 5
 run_swarm "/home/gsynpeer/my_rl_swarm_6" "swarm_6" &
-sleep 3
+sleep 5
 run_swarm "/home/gsynpeer/my_rl_swarm_7" "swarm_7" &
-sleep 3
+sleep 5
 run_swarm "/home/gsynpeer/my_rl_swarm_8" "swarm_8" &
-sleep 3
+sleep 5
 run_swarm "/home/gsynpeer/my_rl_swarm_9" "swarm_9" &
-sleep 3
+sleep 5
 run_swarm "/home/gsynpeer/my_rl_swarm_10" "swarm_10" &
-sleep 3
+sleep 5
 
 # Start monitoring after 5 minutes
 monitor_swarms &
